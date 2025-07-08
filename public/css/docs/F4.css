@@ -1,0 +1,90 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fafdfb;
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.page {
+    width: 210mm;
+    min-height: 330mm;
+    padding: 0;
+    margin: 16mm auto;
+    /*border: 1px #D3D3D3 solid;
+    border-radius: 5px;*/
+    background: white;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+	-webkit-box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+    -moz-box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)
+}
+
+.subpage {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+p {
+	display: block;
+	margin: 0;
+	font: 12pt;
+	color: #000;
+    line-height: 1.24;
+	text-align: left
+}
+    
+@page {
+    size: F4;
+    margin: 0;
+}
+
+@media all {
+	.page-break	{
+		display: none;
+	}
+}
+
+
+@media print {
+    html, body {
+        width: 210mm;
+        min-height: 330mm;
+		background-color: #FFF;
+    }
+	
+	table {
+		break-inside: avoid;
+	}
+	
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: 297mm;
+        box-shadow: none;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+        background: initial;
+        page-break-after: always;
+    }
+	
+	.page-break	{
+		display: block;
+		page-break-before: always;
+	}
+	
+	table.page-break-auto {
+	    page-break-inside: auto;
+	}
+	
+    table.page-break-auto tr {
+        page-break-inside: avoid;
+        page-break-after: auto
+    }
+}

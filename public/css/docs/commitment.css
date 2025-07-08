@@ -1,0 +1,124 @@
+.page {
+	background-image: url(/img/watermark/A4-commitment-25th-blank.png);
+	background-repeat: repeat-y;
+}
+
+.subpage {
+	padding: 12.7mm 17mm 5mm 17mm;
+	font-family: "Times New Roman", Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+}
+
+.subpage.normal-margin {
+	padding: 24.4mm;
+}
+
+.subpage p{
+	line-height: 1.5;
+}
+
+.subpage p.lh-1-2{
+	line-height: 1.2;
+}
+
+ol.our-commitment{
+	margin-block-start: 0.5em;
+	padding-inline-start: 16px;
+}
+
+ol.our-commitment li{
+	margin-bottom: 5px;
+}
+
+ol.financial-commitment{
+	margin-block-start: 0;
+	padding-inline-start: 16px;
+}
+
+.fs-8{
+	font-size: 8pt;
+}
+
+.fs-9{
+	font-size: 9pt;
+}
+
+.fs-11{
+	font-size: 11pt;
+}
+
+.fs-12{
+	font-size: 12pt;
+}
+
+#support-opt tr td{
+	padding: 3px 0;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse
+}
+
+table tr td {
+	padding: 5px 0;
+}
+
+table.table-no-border td, table.table-no-border th {
+	border: 0;
+}
+
+table.table-no-border td.border-all {
+	border: 1px solid black;
+}
+
+table.table-no-border td.border-x {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+table.table-no-border td.border-bottom {
+	border-bottom: 1px solid black;
+}
+
+table.table-border td, table.table-border th {
+	border: 1px solid black;
+}
+
+table.table-border tr td, table.table-border tr th {
+	padding: 1px;
+	font-size: 11pt;
+	vertical-align: middle
+}
+
+table.table-border tr th {
+	font-weight: 700!important;
+	text-align: center
+}
+
+table.table-border td.no-border-y {
+	border-top: 0;
+	border-bottom: 0;
+}
+
+table.table-border td.no-border-top {
+	border-top: 0;
+}
+
+table.table-border td.no-border-bottom {
+	border-bottom: 0;
+}
+
+table.table-schedule td, table.table-schedule th {
+	border: 1px solid black;
+}
+
+table.table-schedule tr td, table.table-schedule tr th {
+	padding: 4px;
+	font-size: 11pt;
+	vertical-align: middle
+}
+
+@page {
+    margin: 0
+}
