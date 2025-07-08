@@ -33,7 +33,7 @@ Pilih Sistem @endsection
                     <i class="zmdi zmdi-local-florist zmdi-hc-3x"></i>
                     <div class="row">
                       <div class="col-12">
-                        <span class="text-element">Monitoring</span>
+                        <span class="text-element">Operasional</span>
                       </div>
                     </div>
                   </div>
