@@ -1,0 +1,17 @@
+<div class="form-group row">
+    <label for="rombel" class="col-sm-3 control-label">Nama Kelas</label>
+    <div class="col-sm-9">
+        @if($kelas->isEmpty())
+        <select class="form-control" name="kelas" required>
+            <option value="">Data Kosong</option>
+        </select>
+        @else
+        <select class="form-control" name="kelas" onchange="getsiswa(this.value)" id="kelas" required>
+            <option value="">== Pilih ==</option>
+            @foreach($kelas as $kelases)
+            <option value="{{$kelases->id}}">{{$kelases->level->level.' '.$kelases->namakelases->class_name}}</option>
+            @endforeach
+        </select>
+        @endif
+    </div>
+</div>

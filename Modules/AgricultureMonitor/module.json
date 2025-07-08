@@ -1,0 +1,11 @@
+{
+    "name": "AgricultureMonitor",
+    "alias": "agriculturemonitor",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\AgricultureMonitor\\Providers\\AgricultureMonitorServiceProvider"
+    ],
+    "files": []
+}
