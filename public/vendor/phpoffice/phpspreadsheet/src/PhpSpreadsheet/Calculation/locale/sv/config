@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ##
 ## PhpSpreadsheet
 ##
@@ -22,3 +23,29 @@ REF	= #Referens!
 NAME	= #Namn?
 NUM	= #Ogiltigt!
 NA	= #Saknas!
+=======
+##
+## PhpSpreadsheet
+##
+
+ArgumentSeparator	= ;
+
+
+##
+##	(For future use)
+##
+currencySymbol	= kr
+
+
+##
+##	Excel Error Codes	(For future use)
+
+##
+NULL	= #Skärning!
+DIV0	= #Division/0!
+VALUE	= #Värdefel!
+REF	= #Referens!
+NAME	= #Namn?
+NUM	= #Ogiltigt!
+NA	= #Saknas!
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7

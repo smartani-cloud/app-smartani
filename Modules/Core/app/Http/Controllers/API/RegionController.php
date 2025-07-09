@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 namespace Modules\Core\Http\Controllers\API;
@@ -27,3 +28,34 @@ class RegionController extends Controller
         return response()->json($data);
     }
 }
+=======
+<?php
+
+namespace Modules\Core\Http\Controllers\API;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+use Modules\Core\Models\References\Region;
+
+class RegionController extends Controller
+{
+    public function fetchCities(Request $request)
+    {
+        $data['cities'] = Region::whereRaw('LENGTH(code) = 5')->where('code','LIKE',$request->province.'.%')->orderBy('name', 'ASC')->get(["name", "code"]);
+        return response()->json($data);
+    }
+
+    public function fetchSubdistricts(Request $request)
+    {
+        $data['subdistricts'] = Region::whereRaw('LENGTH(code) = 8')->where('code','LIKE',$request->city.'.%')->orderBy('name', 'ASC')->get(["name", "code"]);
+        return response()->json($data);
+    }
+
+    public function fetchVillages(Request $request)
+    {
+        $data['villages'] = Region::whereRaw('LENGTH(code) = 13')->where('code','LIKE',$request->subdistrict.'.%')->orderBy('name', 'ASC')->get(["name", "code"]);
+        return response()->json($data);
+    }
+}
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7

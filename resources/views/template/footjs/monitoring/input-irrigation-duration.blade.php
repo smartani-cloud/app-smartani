@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 	<script>
     $('#inputIrrigationDuration').TouchSpin({
         min: 0,
@@ -8,4 +9,16 @@
 		buttondown_class: "btn btn-brand-green-dark bootstrap-touchspin-down",
 		buttonup_class: "btn btn-brand-green-dark bootstrap-touchspin-up"
     });
+=======
+	<script>
+    $('#inputIrrigationDuration').TouchSpin({
+        min: 0,
+        max: 3000,
+        boostat: 50,
+        maxboostedstep: 100,        
+        initval: 1,
+		buttondown_class: "btn btn-brand-green-dark bootstrap-touchspin-down",
+		buttonup_class: "btn btn-brand-green-dark bootstrap-touchspin-up"
+    });
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7
     </script>

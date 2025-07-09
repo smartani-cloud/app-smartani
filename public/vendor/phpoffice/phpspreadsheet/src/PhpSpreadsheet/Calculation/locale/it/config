@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ##
 ## PhpSpreadsheet
 ##
@@ -22,3 +23,29 @@ REF	= #RIF!
 NAME	= #NOME?
 NUM	= #NUM!
 NA	= #N/D
+=======
+##
+## PhpSpreadsheet
+##
+
+ArgumentSeparator	= ;
+
+
+##
+##	(For future use)
+##
+currencySymbol	= €
+
+
+##
+##	Excel Error Codes	(For future use)
+
+##
+NULL	= #NULLO!
+DIV0	= #DIV/0!
+VALUE	= #VALORE!
+REF	= #RIF!
+NAME	= #NOME?
+NUM	= #NUM!
+NA	= #N/D
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7

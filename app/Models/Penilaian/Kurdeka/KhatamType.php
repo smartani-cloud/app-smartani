@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 namespace App\Models\Penilaian\Kurdeka;
@@ -23,3 +24,30 @@ class KhatamType extends Model
         return $this->hasMany('App\Models\Penilaian\Kurdeka\Khatam', 'khatam_type_id');
     }
 }
+=======
+<?php
+
+namespace App\Models\Penilaian\Kurdeka;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class KhatamType extends Model
+{
+    use HasFactory;
+    protected $table = "tref_khatam_types";
+    protected $fillable = [
+        'name',
+    ];
+
+    public function levels()
+    {
+        return $this->hasMany('App\Models\Penilaian\Kurdeka\LevelKhatamType', 'khatam_type_id');
+    }
+
+    public function khatam()
+    {
+        return $this->hasMany('App\Models\Penilaian\Kurdeka\Khatam', 'khatam_type_id');
+    }
+}
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7

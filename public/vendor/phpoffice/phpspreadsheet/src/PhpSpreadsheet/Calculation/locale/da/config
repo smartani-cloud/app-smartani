@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ##
 ## PhpSpreadsheet
 ##
@@ -23,3 +24,30 @@ REF	= #REFERENCE!
 NAME	= #NAVN?
 NUM	= #NUM!
 NA	= #I/T
+=======
+##
+## PhpSpreadsheet
+##
+
+ArgumentSeparator	= ;
+
+
+##
+##	(For future use)
+##
+currencySymbol	= kr
+
+
+
+##
+##	Excel Error Codes	(For future use)
+
+##
+NULL	= #NUL!
+DIV0	= #DIVISION/0!
+VALUE	= #VÆRDI!
+REF	= #REFERENCE!
+NAME	= #NAVN?
+NUM	= #NUM!
+NA	= #I/T
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7

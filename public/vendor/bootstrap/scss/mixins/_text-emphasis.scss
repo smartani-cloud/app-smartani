@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // stylelint-disable declaration-no-important
 
 // Typography
@@ -14,3 +15,21 @@
     }
   }
 }
+=======
+// stylelint-disable declaration-no-important
+
+// Typography
+
+@mixin text-emphasis-variant($parent, $color) {
+  #{$parent} {
+    color: $color !important;
+  }
+  @if $emphasized-link-hover-darken-percentage != 0 {
+    a#{$parent} {
+      @include hover-focus {
+        color: darken($color, $emphasized-link-hover-darken-percentage) !important;
+      }
+    }
+  }
+}
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7

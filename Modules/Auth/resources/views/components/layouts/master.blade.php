@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,3 +22,28 @@
 </body>
 
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  @include('auth::components.layouts.head')
+  @yield('headmeta')
+  
+</head>
+
+<body>
+  <!-- Container Fluid-->
+  <div class="container-login100" style="background-image: url('{{ request()->routeIs('reset.password*') || request()->routeIs('psb.pendaftaran*') ? '../' : '' }}modules/Auth/img/login/PHOTO-2025-06-22-17-03-50.jpg')">
+  @yield('content')
+  </div>
+  <!-- Container Fluid-->
+  
+  @include('auth::components.layouts.plugin')
+    
+  @yield('footjs')
+</body>
+
+</html>
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7
