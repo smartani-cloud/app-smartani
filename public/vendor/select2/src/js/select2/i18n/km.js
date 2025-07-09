@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 define(function () {
   // Khmer
   return {
@@ -37,3 +38,44 @@ define(function () {
     }
   };
 });
+=======
+define(function () {
+  // Khmer
+  return {
+    errorLoading: function () {
+      return 'មិនអាចទាញយកទិន្នន័យ';
+    },
+    inputTooLong: function (args) {
+      var overChars = args.input.length - args.maximum;
+
+      var message = 'សូមលុបចេញ  ' + overChars + ' អក្សរ';
+
+      return message;
+    },
+    inputTooShort: function (args) {
+      var remainingChars = args.minimum - args.input.length;
+
+      var message = 'សូមបញ្ចូល' + remainingChars + ' អក្សរ រឺ ច្រើនជាងនេះ';
+
+      return message;
+    },
+    loadingMore: function () {
+      return 'កំពុងទាញយកទិន្នន័យបន្ថែម...';
+    },
+    maximumSelected: function (args) {
+      var message = 'អ្នកអាចជ្រើសរើសបានតែ ' + args.maximum + ' ជម្រើសប៉ុណ្ណោះ';
+
+      return message;
+    },
+    noResults: function () {
+      return 'មិនមានលទ្ធផល';
+    },
+    searching: function () {
+      return 'កំពុងស្វែងរក...';
+    },
+    removeAllItems: function () {
+      return 'លុបធាតុទាំងអស់';
+    }
+  };
+});
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .page:first-child {
 	background-image: none;
 }
@@ -145,4 +146,153 @@ table.tanda-tangan tr td {
 
 @page {
     margin: 0
+=======
+.page:first-child {
+	background-image: none;
+}
+
+.page {
+	background-image: url(/img/watermark/A4-full-logomark.png);
+	background-repeat: repeat-y;
+}
+
+.subpage {
+	padding: 12.7mm;
+}
+
+.subpage.normal-margin {
+	padding: 24.4mm;
+}
+
+.title-container {
+	margin-top: 35px;
+	text-align: center;
+}
+
+.title-container .logo {
+	width: 80px;
+	margin-bottom: 40px
+}
+
+.title-container > .title {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 22px;
+	font-weight: 700!important;
+	line-height: 1.6
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse
+}
+
+table tr td {
+	padding: 5px 0;
+}
+
+table.cover-data {
+	width: auto;
+	white-space: nowrap;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.cover-data tr td {
+	padding: 17px 10px;
+	font-size: 14px
+}
+
+.name-container {
+	text-align: center;
+}
+
+.name-container > p {
+	text-align: center;
+	font-size: 16px;
+	margin-bottom: .4em
+}
+
+table.cover-name {
+	min-width: 70%;
+	width: auto;
+	white-space: nowrap;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.2em;
+	border: 1px solid black;
+	font-size: 14px
+}
+
+table.cover-name tr td {
+	padding: 10px
+}
+
+.ministry-container p {
+	text-align: center;
+	font-size: 16px;
+	font-weight: 700!important;
+	line-height: 1.5
+}
+
+#petunjukPengisian {
+	text-align: justify;
+	line-height: 2
+}
+
+#petunjukPengisian p {
+	text-align: justify;
+	line-height: 1.5
+}
+
+#dataSekolah {
+	margin-top: 6cm
+}
+
+table.unit-data {
+	width: auto;
+	white-space: nowrap;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.unit-data tr td {
+	padding: 5px 5px;
+	font-size: 12px
+}
+
+table.student-data {
+	width: auto;
+	white-space: nowrap;
+}
+
+table.student-data tr td {
+	padding: 5px 5px;
+	font-size: 12px
+}
+
+table.pas-foto {
+	width: 3cm;
+	height: 4cm;
+	border: 1px solid black;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.tanda-tangan {
+	width: 100%;
+}
+
+table.tanda-tangan tr td {
+	width: 50%;
+	text-align: center
+}
+
+.ttd {
+	height: 1.25cm
+}
+
+@page {
+    margin: 0
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ##
 ## PhpSpreadsheet
 ##
@@ -22,3 +23,29 @@ REF	= #ADR!
 NAME	= #NAZWA?
 NUM	= #LICZBA!
 NA	= #N/D!
+=======
+##
+## PhpSpreadsheet
+##
+
+ArgumentSeparator	= ;
+
+
+##
+##	(For future use)
+##
+currencySymbol	= zł
+
+
+##
+##	Excel Error Codes	(For future use)
+
+##
+NULL	= #ZERO!
+DIV0	= #DZIEL/0!
+VALUE	= #ARG!
+REF	= #ADR!
+NAME	= #NAZWA?
+NUM	= #LICZBA!
+NA	= #N/D!
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7

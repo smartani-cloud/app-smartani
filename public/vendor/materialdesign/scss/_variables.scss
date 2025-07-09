@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $mdi-filename:         "materialdesignicons";
 $mdi-font-name:        "Material Design Icons";
 $mdi-font-family:      "materialdesignicons";
@@ -7,6 +8,17 @@ $mdi-font-size-base:   24px !default;
 $mdi-css-prefix:       mdi !default;
 $mdi-version:          "7.0.96" !default;
 
+=======
+$mdi-filename:         "materialdesignicons";
+$mdi-font-name:        "Material Design Icons";
+$mdi-font-family:      "materialdesignicons";
+$mdi-font-weight:      "normal";
+$mdi-font-path:        "../fonts" !default;
+$mdi-font-size-base:   24px !default;
+$mdi-css-prefix:       mdi !default;
+$mdi-version:          "7.0.96" !default;
+
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7
 $mdi-icons: (
   "ab-testing": F01C9,
   "abacus": F16E0,

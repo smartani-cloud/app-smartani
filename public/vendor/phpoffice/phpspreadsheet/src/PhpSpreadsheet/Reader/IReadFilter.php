@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 namespace PhpOffice\PhpSpreadsheet\Reader;
@@ -15,3 +16,22 @@ interface IReadFilter
      */
     public function readCell($column, $row, $worksheetName = '');
 }
+=======
+<?php
+
+namespace PhpOffice\PhpSpreadsheet\Reader;
+
+interface IReadFilter
+{
+    /**
+     * Should this cell be read?
+     *
+     * @param string $column Column address (as a string value like "A", or "IV")
+     * @param int $row Row number
+     * @param string $worksheetName Optional worksheet name
+     *
+     * @return bool
+     */
+    public function readCell($column, $row, $worksheetName = '');
+}
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7

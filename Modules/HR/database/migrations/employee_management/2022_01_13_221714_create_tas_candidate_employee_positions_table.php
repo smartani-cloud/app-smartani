@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -31,3 +32,38 @@ class CreateTasCandidateEmployeePositionsTable extends Migration
         Schema::dropIfExists('tas_candidate_employee_positions');
     }
 }
+=======
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateTasCandidateEmployeePositionsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('tas_candidate_employee_positions', function (Blueprint $table) {
+            $table->id();
+			$table->bigInteger('candidate_employee_id');
+			$table->integer('position_id');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('tas_candidate_employee_positions');
+    }
+}
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
 	background-image: url(/img/watermark/A4-wide-margin-logomark.png);
 	background-size: 0 0;
@@ -170,4 +171,178 @@ ul.deskripsi li {
     table.unvalidated tr td {
     	font-size: 22px;
     }
+=======
+body {
+	background-image: url(/img/watermark/A4-wide-margin-logomark.png);
+	background-size: 0 0;
+}
+
+.page {
+	background-image: url(/img/watermark/A4-full-logomark.png);
+	background-repeat: repeat-y;
+}
+
+.subpage {
+	padding: 12.5mm;
+}
+
+.komponen-rapor {
+	font-size: 14px;
+	font-weight: 700!important;
+	line-height: 2
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse
+}
+
+table tr td {
+	padding: 5px 0;
+}
+
+table.table-border td, table.table-border th {
+	border: 1px solid black;
+}
+
+table.table-border tr td, table.table-border tr th {
+	padding: 5px;
+	font-size: 11px;
+	vertical-align: middle
+}
+
+table.table-border tr th {
+	font-weight: 700!important;
+	text-align: center
+}
+
+table.table-border td.no-border-y {
+	border-top: 0;
+	border-bottom: 0;
+}
+
+table.table-border td.no-border-top {
+	border-top: 0;
+}
+
+table.table-border td.no-border-bottom {
+	border-bottom: 0;
+}
+
+table.table-target tr td, table.table-target tr th {
+	padding: 15px;
+}
+
+table.table-catatan {
+	width: 75%;
+	min-height: 1.5cm
+}
+
+table.table-catatan tr td {
+	padding: 10px;
+	font-size: 11px;
+	vertical-align: top
+}
+
+table.table-keputusan {
+	width: 80%;
+	border: 1px solid black
+}
+
+table.table-keputusan tr td {
+	padding: 8px;
+	font-size: 11px;
+	vertical-align: middle
+}
+
+table.tanda-tangan {
+	width: 100%;
+}
+
+table.tanda-tangan tr td {
+	width: 50%;
+	text-align: center
+}
+
+table.unvalidated {
+	width: 100%;
+}
+
+table.unvalidated tr td {
+	padding: 12px;
+	font-size: 18px;
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	background-color: red;
+}
+
+.ttd {
+	height: 1.25cm
+}
+
+ul.deskripsi {
+	margin: 0;
+    padding: 5px 5px 5px 25px;
+}
+
+ul.deskripsi li {
+	margin-bottom: 5px;
+}
+
+@page {
+    margin: 12.5mm;
+}
+
+@media print {
+	body {
+		background-size: 210mm 308.97mm;
+		background-repeat: repeat-y;
+	}
+	
+	.page {
+		background-image: none;
+	}
+	
+	.subpage {
+		padding: 0;
+	    font-size: 14px;
+	}
+	
+	.fs-22 {
+	    font-size: 26px;
+	}
+	
+	.fs-18 {
+	    font-size: 22px;
+	}
+	
+	.fs-14 {
+	    font-size: 16px;
+	}
+	
+	.fs-11 {
+	    font-size: 14px;
+	}
+	
+	.komponen-rapor {
+    	font-size: 18px;
+    }
+	
+	table.table-border tr td, table.table-border tr th {
+    	font-size: 14px;
+    }
+    
+    table.table-catatan tr td {
+    	font-size: 14px;
+    }
+    
+    table.table-keputusan tr td {
+    	font-size: 14px
+    }
+    
+    table.unvalidated tr td {
+    	font-size: 22px;
+    }
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7
 }
