@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/agriculturemonitor",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\AgricultureMonitor\\": "app/",
+            "Modules\\AgricultureMonitor\\Database\\Factories\\": "database/factories/",
+            "Modules\\AgricultureMonitor\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\AgricultureMonitor\\Tests\\": "tests/"
+        }
+    }
+}

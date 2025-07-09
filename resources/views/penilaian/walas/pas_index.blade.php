@@ -1,0 +1,140 @@
+@extends('template.main.master')
+
+@section('title')
+Cetak Rapor PAS
+@endsection
+
+@section('topbarpenilaian')
+@include('template.topbar.gurumapel')
+@endsection
+
+@section('sidebar')
+@include('template.sidebar.kependidikan')
+@endsection
+
+@section('content')
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Cetak Rapor Penilaian Akhir Semester</h1>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="javascript:void(0)">Penilaian</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Cetak Rapor PAS</li>
+    </ol>
+</div>
+
+<div class="row mb-3">
+    <div class="col-md-12">
+        <div class="card h-100">
+            <div class="card-body">
+                @if(Session::has('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Sukses!</strong> {{ Session::get('success') }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                @endif
+                @if(Session::has('danger'))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Gagal!</strong> {{ Session::get('danger') }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                @endif
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group row">
+                            <label for="ajaran_id" class="col-sm-3 control-label">Tahun Pelajaran</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" value="{{$semester->semester_id . ' (' .$semester->semester.')'}}" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="rombel" class="col-sm-3 control-label">Nama Kelas</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="rombel_id" class="form-control" id="rombel" style="width:100%;" value="{{$kelas->level->level.' '.$kelas->namakelases->class_name}}" tabindex="-1" aria-hidden="true" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <table class="table align-items-center table-flush">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th class="text-center">Nama Siswa</th>
+                                    <th class="text-center">Status</th>
+                                    <th colspan="3" class="text-center">Cetak Rapor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if($siswa->isEmpty())
+                                <tr>
+                                    <td colspan="5" class="text-center">Data Kosong</td>
+                                </tr>
+                                @else
+                                @foreach($siswa as $key => $siswas)
+                                <tr>
+                                    <td>{{$siswas->identitas->student_name}}</td>
+                                    @if($nilairapor[$key] && $nilairapor[$key]->report_status_id == 1)
+                                    <td class="text-center">
+                                        <h5><span class="badge badge-success">Nilai Sudah Divalidasi</span></h5>
+                                    </td>
+                                    <td class="text-center"><a href="{{ route('pas.cetak.cover',['id'=>$siswas->id])}}" target="_blank"><button class="btn  btn-sm btn-brand-green"><i class="fa fa-print"></i> Cetak Cover</button></a></td>
+                                    @if($siswas->unit_id == 1)
+                                    <td class="text-center">
+                                        <div class="btn-group">
+                                          <a href="{{ route('pas.cetak.laporantk',['id'=>$siswas->id])}}" class="btn btn-sm btn-brand-green" target="_blank"><i class="fa fa-print"></i> Cetak Rapor</a>
+                                          <button type="button" class="btn btn-sm btn-brand-green dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="sr-only">Lainnya</span>
+                                          </button>
+                                          <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="{{ route('pas.cetak.laporantk',['id'=>$siswas->id,'digital'=>1])}}" target="_blank">Cetak Tanpa TTD</a>
+                                          </div>
+                                        </div>
+                                    </td>
+                                    @else
+                                    <td class="text-center">
+                                        <div class="btn-group">
+                                          <a href="{{ route('pas.cetak.laporan',['id'=>$siswas->id])}}" class="btn btn-sm btn-brand-green" target="_blank"><i class="fa fa-print"></i> Cetak Rapor</a>
+                                          <button type="button" class="btn btn-sm btn-brand-green dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="sr-only">Lainnya</span>
+                                          </button>
+                                          <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="{{ route('pas.cetak.laporan',['id'=>$siswas->id,'digital'=>1])}}" target="_blank">Cetak Tanpa TTD</a>
+                                          </div>
+                                        </div>
+                                    </td>
+                                    @endif
+                                    <td class="text-center"><a href="{{ route('pas.cetak.akhir',['id'=>$siswas->id])}}" target="_blank"><button class="btn btn-sm btn-secondary"><i class="fa fa-print"></i> Cetak Halaman Akhir</button></a></td>
+                                    @else
+                                    <td class="text-center">
+                                        <h5><span class="badge badge-warning">Nilai Belum Divalidasi</span></h5>
+                                    </td>
+                                    <td colspan="3" class="text-center">
+                                        @if(!$nilairapor[$key])
+                                        <button type="button" class="btn btn-sm btn-brand-green" disabled="disabled"><i class="fa fa-eye"></i> Pratinjau Rapor</button>
+                                        @else
+                                        @if($siswas->unit_id == 1)
+                                        <a href="{{ route('pas.cetak.laporantk',['id'=>$siswas->id])}}" class="btn btn-sm btn-brand-green" target="_blank"><i class="fa fa-eye"></i> Pratinjau Rapor</a>
+                                        @else
+                                        <a href="{{ route('pas.cetak.laporan',['id'=>$siswas->id])}}" class="btn btn-sm btn-brand-green" target="_blank"><i class="fa fa-eye"></i> Pratinjau Rapor</a>
+                                        @endif
+                                        @endif
+                                    </td>
+                                    @endif
+                                </tr>
+                                @endforeach
+                                @endif
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Row-->
+@endsection
+
+@section('footjs')
+@include('template.footjs.kepegawaian.tooltip')
+@endsection

@@ -1,0 +1,9 @@
+{
+    "Core": true,
+    "HR": true,
+    "Auth": true,
+    "System": true,
+    "Access": true,
+    "FarmManagement": true,
+    "AgricultureMonitor": true
+}

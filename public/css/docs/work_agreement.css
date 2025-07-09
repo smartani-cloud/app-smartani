@@ -1,0 +1,17 @@
+.subpage {
+	padding: 12.7mm;
+}
+
+.ttd {
+	height: 1.25cm
+}
+
+@page {
+    margin: 12.7mm;
+}
+
+@media print {
+	.subpage {
+		padding: 0;
+	}
+}
