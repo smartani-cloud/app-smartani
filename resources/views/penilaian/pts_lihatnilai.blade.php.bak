@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @extends('template.print.master')
 
 @section('title')
@@ -256,4 +257,264 @@ Cetak Laporan PTS
 <!-- Plugins and scripts required by this view-->
 
 <!-- Page level custom scripts -->
+=======
+@extends('template.print.master')
+
+@section('title')
+Cetak Laporan PTS
+@endsection
+
+@section('headmeta')
+<!-- Custom styles for this template -->
+<link href="{{ asset('css/docs/report.css') }}" rel="stylesheet" type="text/css" media="screen">
+<link href="{{ asset('css/docs/report.css') }}" rel="stylesheet" type="text/css" media="print">
+@endsection
+
+@section('content')
+<div class="page">
+    <div class="subpage">
+        <p class="text-center text-uppercase fs-22 font-weight-bold">Laporan Tengah Semester</p>
+        <p class="text-center text-uppercase fs-18 font-weight-bold">Sekolah Menengah Atas Islam Terpadu Auliya</p>
+        <div id="dataSiswa" class="m-t-22">
+            <table>
+                <tr>
+                    <td style="width: 17%">
+                        Nama Peserta Didik
+                    </td>
+                    <td style="width: 2%">
+                        :
+                    </td>
+                    <td style="width: 40%">
+                        {{ $siswa->student_name }}
+                    </td>
+                    <td style="width: 20%">
+                        Kelas
+                    </td>
+                    <td style="width: 2%">
+                        :
+                    </td>
+                    <td style="width: 19%">
+                        {{ $rapor->kelas->level->level_romawi.' '.$rapor->kelas->jurusan->major_name.' '.$rapor->kelas->namakelases->class_name }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        NISN
+                    </td>
+                    <td>
+                        :
+                    </td>
+                    <td>
+                        {{ $siswa->student_nisn }}
+                    </td>
+                    <td>
+                        Semester
+                    </td>
+                    <td>
+                        :
+                    </td>
+                    <td>
+                        {{ $semester->semester }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        NIPD
+                    </td>
+                    <td>
+                        :
+                    </td>
+                    <td>
+                        {{ $siswa->student_nis }}
+                    </td>
+                    <td>
+                        Tahun Pelajaran
+                    </td>
+                    <td>
+                        :
+                    </td>
+                    <td>
+                        {{ $semester->tahunAjaran->academic_year }}
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="kurikulumNasional" class="m-t-22 m-b-16">
+            <table class="table-border">
+                @php
+                $column = $nilai_harian->countBy('score_knowledge_id')->max();
+                @endphp
+                <tr>
+                    <th style="width: 3%">
+                        No
+                    </th>
+                    <th style="width: 26%">
+                        Mata Pelajaran
+                    </th>
+                    <th colspan="{{ $column }}" style="width: 26%">
+                        Penilaian Harian
+                    </th>
+                    <th style="width: 5%">
+                        PTS
+                    </th>
+                    <th style="width: 12%">
+                        Keterampilan
+                    </th>
+                    <th style="width: 8%">
+                        Sikap
+                    </th>
+                    <th style="width: 20%">
+                        Deskripsi
+                    </th>
+                </tr>
+                @php
+                $active = null;
+                $j = 1;
+                @endphp
+                @foreach($kelompok as $k)
+                @if($k->matapelajarans()->count() > 0)
+                @if($active != $k->id)
+                <tr>
+                    <td class="font-weight-bold" colspan="{{ $j == 1 ? $column+6 : $column+5 }}">{{ $k->group_subject_name }} {{ $k->jurusan ? $k->jurusan->major_name : '' }}</td>
+                </tr>
+                @php
+                $active = $k->id;
+                $j++;
+                @endphp
+                @endif
+                @php $i = 1; @endphp
+                @foreach($k->matapelajarans as $m)
+                <tr>
+                    <td class="text-center">{{ $i++ }}</td>
+                    <td>{{ $m->subject_name }}</td>
+                    @php
+                    $pengetahuan = $rapor->pengetahuan()->where('subject_id',$m->id)->first();
+                    $keterampilan = $rapor->keterampilan()->where('subject_id',$m->id)->first();
+                    $sikap = $rapor->sikap_pts()->where('subject_id',$m->id)->first();
+                    $m = 1;
+                    @endphp
+                    @if($pengetahuan)
+                    @foreach($nilai_harian->where('score_knowledge_id',$pengetahuan->id) as $h)
+                    <td class="text-center">{{ $h->score }}</td>
+                    @php $m++ @endphp
+                    @endforeach
+                    @endif
+                    @if($m <= $column) @for($l=$m; $l<=$column; $l++) <td class="text-center">&nbsp;</td>
+                        @endfor
+                        @endif
+                        <td class="text-center">{{ $pengetahuan ? $pengetahuan->pts : '' }}</td>
+                        @php
+                        $nilai_keterampilan = $keterampilan ? number_format((float)$keterampilan->nilaiketerampilandetail()->whereNotNull('score')->average('score'), 1, ',', '') : '';
+                        @endphp
+                        <td class="text-center">{{ $nilai_keterampilan }}</td>
+                        @php
+                        $nilai_sikap = $sikap ? $sikap->predicate : '';
+                        @endphp
+                        <td class="text-center">{{ $nilai_sikap }}</td>
+                        @if($j == 2)
+                        <td rowspan="{{ $total_rows-1 }}" style="vertical-align: top">{{ str_replace("@nama",$siswa->student_nickname ? $siswa->student_nickname : $siswa->student_name,$rapor->pts->description) }}</td>
+                        @endif
+                        @php $j++ @endphp
+                </tr>
+                @endforeach
+                @endif
+                @endforeach
+            </table>
+        </div>
+        <!--<div id="ekstrakurikuler" class="m-t-22">
+			<table class="table-border">
+				<tr>
+					<th style="width: 3%">
+						No
+					</th>
+					<th style="width: 37%">
+						Ekstrakurikuler
+					</th>
+					<th style="width: 60%">
+						Keterangan
+					</th>
+				</tr>
+
+				@php $i = 1 @endphp
+				@foreach($rapor->ekstra()->get() as $e)
+				<tr>
+					<td class="text-center">
+						{{ $i++ }}
+					</td>
+					<td class="text-center">
+						{{ $e->extra_name }}
+					</td>
+					<td class="text-center">
+						{{ $e->description }}
+					</td>
+				</tr>
+				@endforeach
+			</table>
+		</div>-->
+        <div id="ketidakhadiran" class="m-t-22">
+            <table class="table-border" style="width: 50%">
+                <tr>
+                    <th class="text-center" style="width: 8%">No</th>
+                    <th class="text-center" colspan="2">
+                        Ketidakhadiran
+                    </th>
+                </tr>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td>
+                        Sakit
+                    </td>
+                    <td class="text-center">
+                        {{ $rapor->pts->sick ? $rapor->pts->sick : '0' }} hari
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">2</td>
+                    <td>Izin</td>
+                    <td class="text-center">
+                        {{ $rapor->pts->leave ? $rapor->pts->leave : '0' }} hari
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">3</td>
+                    <td>Alpa</td>
+                    <td class="text-center">
+                        {{ $rapor->pts->absent ? $rapor->pts->absent : '0' }} hari
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="tandaTangan" class="m-t-33">
+            <table class="tanda-tangan">
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>Tangerang Selatan, {{ Date::now('Asia/Jakarta')->format('j F Y') }}</td>
+                </tr>
+                <tr>
+                    <td>Mengetahui,</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Kepala Sekolah,</td>
+                    <td>Wali Kelas,</td>
+                </tr>
+                <tr>
+                    <td class="ttd">&nbsp;</td>
+                    <td class="ttd">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>{{ $rapor->hm_name }}</td>
+                    <td>{{ $rapor->hr_name }}</td>
+            </table>
+        </div>
+    </div>
+</div>
+<!--Row-->
+@endsection
+
+@section('footjs')
+<!-- Plugins and scripts required by this view-->
+
+<!-- Page level custom scripts -->
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7
 @endsection

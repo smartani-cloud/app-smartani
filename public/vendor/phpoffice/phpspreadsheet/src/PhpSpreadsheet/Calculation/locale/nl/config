@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ##
 ## PhpSpreadsheet
 ##
@@ -22,3 +23,29 @@ REF	= #VERW!
 NAME	= #NAAM?
 NUM	= #GETAL!
 NA	= #N/B
+=======
+##
+## PhpSpreadsheet
+##
+
+ArgumentSeparator	= ;
+
+
+##
+##	(For future use)
+##
+currencySymbol	= €
+
+
+##
+##	Excel Error Codes	(For future use)
+
+##
+NULL	= #LEEG!
+DIV0	= #DEEL/0!
+VALUE	= #WAARDE!
+REF	= #VERW!
+NAME	= #NAAM?
+NUM	= #GETAL!
+NA	= #N/B
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7

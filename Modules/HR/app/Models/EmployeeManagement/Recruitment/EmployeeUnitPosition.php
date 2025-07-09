@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 namespace Modules\HR\App\Models\EmployeeManagement\Recruitment;
@@ -23,3 +24,30 @@ class EmployeeUnitPosition extends Pivot
         return $this->belongsTo('Modules\HR\Models\EmployeeManagement\References\Position','position_id');
     }
 }
+=======
+<?php
+
+namespace Modules\HR\App\Models\EmployeeManagement\Recruitment;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\Pivot;
+
+class EmployeeUnitPosition extends Pivot
+{
+    use HasFactory;
+
+    protected $table = "tas_employee_unit_positions";
+
+    public $incrementing = true;
+
+    public function employeeUnit()
+    {
+        return $this->belongsTo('Modules\HR\Models\EmployeeManagement\Recruitment\EmployeeUnit','employee_unit_id');
+    }
+
+    public function position()
+    {
+        return $this->belongsTo('Modules\HR\Models\EmployeeManagement\References\Position','position_id');
+    }
+}
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7

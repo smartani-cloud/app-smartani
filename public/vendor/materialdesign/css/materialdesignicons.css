@@ -28440,6 +28440,7 @@
 }
 
 .mdi-rotate-45 {
+<<<<<<< HEAD
   /*
         // Not included in production
         &.mdi-flip-h:before {
@@ -28455,6 +28456,23 @@
             filter: FlipV;
             -ms-filter: "FlipV";
         }
+=======
+  /*
+        // Not included in production
+        &.mdi-flip-h:before {
+            -webkit-transform: scaleX(-1) rotate(45deg);
+            transform: scaleX(-1) rotate(45deg);
+            filter: FlipH;
+            -ms-filter: "FlipH";
+        }
+        &.mdi-flip-v:before {
+            -webkit-transform: scaleY(-1) rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: scaleY(-1) rotate(45deg);
+            filter: FlipV;
+            -ms-filter: "FlipV";
+        }
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7
         */
 }
 
@@ -28465,6 +28483,7 @@
 }
 
 .mdi-rotate-90 {
+<<<<<<< HEAD
   /*
         // Not included in production
         &.mdi-flip-h:before {
@@ -28480,6 +28499,23 @@
             filter: FlipV;
             -ms-filter: "FlipV";
         }
+=======
+  /*
+        // Not included in production
+        &.mdi-flip-h:before {
+            -webkit-transform: scaleX(-1) rotate(90deg);
+            transform: scaleX(-1) rotate(90deg);
+            filter: FlipH;
+            -ms-filter: "FlipH";
+        }
+        &.mdi-flip-v:before {
+            -webkit-transform: scaleY(-1) rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: scaleY(-1) rotate(90deg);
+            filter: FlipV;
+            -ms-filter: "FlipV";
+        }
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7
         */
 }
 
@@ -28490,6 +28526,7 @@
 }
 
 .mdi-rotate-135 {
+<<<<<<< HEAD
   /*
         // Not included in production
         &.mdi-flip-h:before {
@@ -28505,6 +28542,23 @@
             filter: FlipV;
             -ms-filter: "FlipV";
         }
+=======
+  /*
+        // Not included in production
+        &.mdi-flip-h:before {
+            -webkit-transform: scaleX(-1) rotate(135deg);
+            transform: scaleX(-1) rotate(135deg);
+            filter: FlipH;
+            -ms-filter: "FlipH";
+        }
+        &.mdi-flip-v:before {
+            -webkit-transform: scaleY(-1) rotate(135deg);
+            -ms-transform: rotate(135deg);
+            transform: scaleY(-1) rotate(135deg);
+            filter: FlipV;
+            -ms-filter: "FlipV";
+        }
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7
         */
 }
 
@@ -28515,6 +28569,7 @@
 }
 
 .mdi-rotate-180 {
+<<<<<<< HEAD
   /*
         // Not included in production
         &.mdi-flip-h:before {
@@ -28530,6 +28585,23 @@
             filter: FlipV;
             -ms-filter: "FlipV";
         }
+=======
+  /*
+        // Not included in production
+        &.mdi-flip-h:before {
+            -webkit-transform: scaleX(-1) rotate(180deg);
+            transform: scaleX(-1) rotate(180deg);
+            filter: FlipH;
+            -ms-filter: "FlipH";
+        }
+        &.mdi-flip-v:before {
+            -webkit-transform: scaleY(-1) rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: scaleY(-1) rotate(180deg);
+            filter: FlipV;
+            -ms-filter: "FlipV";
+        }
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7
         */
 }
 
@@ -28540,6 +28612,7 @@
 }
 
 .mdi-rotate-225 {
+<<<<<<< HEAD
   /*
         // Not included in production
         &.mdi-flip-h:before {
@@ -28555,6 +28628,23 @@
             filter: FlipV;
             -ms-filter: "FlipV";
         }
+=======
+  /*
+        // Not included in production
+        &.mdi-flip-h:before {
+            -webkit-transform: scaleX(-1) rotate(225deg);
+            transform: scaleX(-1) rotate(225deg);
+            filter: FlipH;
+            -ms-filter: "FlipH";
+        }
+        &.mdi-flip-v:before {
+            -webkit-transform: scaleY(-1) rotate(225deg);
+            -ms-transform: rotate(225deg);
+            transform: scaleY(-1) rotate(225deg);
+            filter: FlipV;
+            -ms-filter: "FlipV";
+        }
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7
         */
 }
 
@@ -28565,6 +28655,7 @@
 }
 
 .mdi-rotate-270 {
+<<<<<<< HEAD
   /*
         // Not included in production
         &.mdi-flip-h:before {
@@ -28580,6 +28671,23 @@
             filter: FlipV;
             -ms-filter: "FlipV";
         }
+=======
+  /*
+        // Not included in production
+        &.mdi-flip-h:before {
+            -webkit-transform: scaleX(-1) rotate(270deg);
+            transform: scaleX(-1) rotate(270deg);
+            filter: FlipH;
+            -ms-filter: "FlipH";
+        }
+        &.mdi-flip-v:before {
+            -webkit-transform: scaleY(-1) rotate(270deg);
+            -ms-transform: rotate(270deg);
+            transform: scaleY(-1) rotate(270deg);
+            filter: FlipV;
+            -ms-filter: "FlipV";
+        }
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7
         */
 }
 
@@ -28590,6 +28698,7 @@
 }
 
 .mdi-rotate-315 {
+<<<<<<< HEAD
   /*
         // Not included in production
         &.mdi-flip-h:before {
@@ -28605,6 +28714,23 @@
             filter: FlipV;
             -ms-filter: "FlipV";
         }
+=======
+  /*
+        // Not included in production
+        &.mdi-flip-h:before {
+            -webkit-transform: scaleX(-1) rotate(315deg);
+            transform: scaleX(-1) rotate(315deg);
+            filter: FlipH;
+            -ms-filter: "FlipH";
+        }
+        &.mdi-flip-v:before {
+            -webkit-transform: scaleY(-1) rotate(315deg);
+            -ms-transform: rotate(315deg);
+            transform: scaleY(-1) rotate(315deg);
+            filter: FlipV;
+            -ms-filter: "FlipV";
+        }
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7
         */
 }
 

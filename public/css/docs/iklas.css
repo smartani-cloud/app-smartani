@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .page {
 	background-image: url(/img/watermark/A4-full-logomark.png);
 	background-repeat: repeat-y;
@@ -47,4 +48,55 @@ table.table-border td.no-border-bottom {
 
 @page {
     margin: 0;
+=======
+.page {
+	background-image: url(/img/watermark/A4-full-logomark.png);
+	background-repeat: repeat-y;
+}
+
+.subpage {
+	padding: 12.7mm;
+    font-size: 12px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse
+}
+
+table tr td {
+	padding: 5px 0;
+}
+
+table.table-border td, table.table-border th {
+	border: 1px solid black;
+}
+
+table.table-border tr td, table.table-border tr th {
+	padding: 5px;
+	font-size: 12px;
+	vertical-align: middle
+}
+
+table.table-border tr th {
+	font-weight: 700!important;
+	text-align: center
+}
+
+table.table-border td.no-border-y {
+	border-top: 0;
+	border-bottom: 0;
+}
+
+table.table-border td.no-border-top {
+	border-top: 0;
+}
+
+table.table-border td.no-border-bottom {
+	border-bottom: 0;
+}
+
+@page {
+    margin: 0;
+>>>>>>> 519c7866245bb7df43bd5924d819bc4ab649e1f7
 }
